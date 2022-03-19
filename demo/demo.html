@@ -1,386 +1,542 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>hndy Grid Demo</title>
-  <link rel="stylesheet" href="../dist/css/main.css">
-  <style>
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
-    
-    html {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      color: #2b2b2b;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hndy Grid Demo</title>
+    <link rel="stylesheet" href="../dist/css/main.css" />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
 
-    h4 {
-      font-size: 28px;
-      line-height: 32px;
-      font-weight: 400;
-      margin-top: 16px;
-      margin-bottom: 16px;
-    }
+      html {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #2b2b2b;
+      }
 
-    .example {
-      margin-top: 48px;
-    }
+      h4 {
+        font-size: 28px;
+        line-height: 32px;
+        font-weight: 400;
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
 
-    .grid-demo [class*=col] {
-      background-color: #C8E3FF;
-      font-size: 0.875rem;
-      font-weight: 400;
-      min-height: 4rem;
-      outline: 1px solid #9fc6ff;
-    }
+      .example {
+        margin-top: 48px;
+      }
 
-    .grid-demo-content {
-      background-color: #DDECFF;
-      height: 100%;
-    }
-  </style>
-</head>
-<body>
-  <section class="example">
-    <div class="hndy-grid-container">
-      <div class="hndy-row">
-        <div class="hndy-col-span-12">
-          <h4>Wide</h4>
-        </div>
-      </div>
-    </div>
-    <div class="grid-demo">
+      .grid-demo [class*='col'] {
+        background-color: #c8e3ff;
+        font-size: 0.875rem;
+        font-weight: 400;
+        min-height: 4rem;
+        outline: 1px solid #9fc6ff;
+      }
+
+      .grid-demo-content {
+        background-color: #ddecff;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="example">
       <div class="hndy-grid-container">
         <div class="hndy-row">
-          <div class="hndy-col-span-3"><div class="grid-demo-content">1/4</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content">2/4</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content">3/4</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content">4/4</div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="example">
-    <div class="hndy-grid-container">
-      <div class="hndy-row">
-        <div class="hndy-col-span-12">
-          <h4>Condensed</h4>
-        </div>
-      </div>
-    </div>
-    <div class="grid-demo">
-      <div class="hndy-grid-container">
-        <div class="hndy-row hndy-row--condensed">
-          <div class="hndy-col-span-3"><div class="grid-demo-content">1/4</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content">2/4</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content">3/4</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content">4/4</div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="example">
-    <div class="hndy-grid-container">
-      <div class="hndy-row">
-        <div class="hndy-col-span-12">
-          <h4>Narrow</h4>
-        </div>
-      </div>
-    </div>
-    <div class="grid-demo">
-      <div class="hndy-grid-container">
-        <div class="hndy-row hndy-row--narrow">
-          <div class="hndy-col-span-3"><div class="grid-demo-content">1/4</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content">2/4</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content">3/4</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content">4/4</div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="example">
-    <div class="hndy-grid-container">
-      <div class="hndy-row">
-        <div class="hndy-col-span-12">
-          <h4>Full Width</h4>
-        </div>
-      </div>
-    </div>
-    <div class="grid-demo">
-      <div class="hndy-grid-container hndy-grid-container--full-width">
-        <div class="hndy-row">
-          <div class="hndy-col-span-3"><div class="grid-demo-content">1/4</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content">2/4</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content">3/4</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content">4/4</div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="example">
-    <div class="hndy-grid-container">
-      <div class="hndy-row">
-        <div class="hndy-col-span-12">
-          <h4>Custom Grid Column</h4>
-        </div>
-      </div>
-    </div>
-    <div class="grid-demo">
-      <div class="hndy-grid-container">
-        <div class="hndy-row hndy-row--6">
-          <div class="hndy-col-span-1"><div class="grid-demo-content">1/6</div></div>
-          <div class="hndy-col-span-1"><div class="grid-demo-content">2/6</div></div>
-          <div class="hndy-col-span-1"><div class="grid-demo-content">3/6</div></div>
-          <div class="hndy-col-span-1"><div class="grid-demo-content">4/6</div></div>
-          <div class="hndy-col-span-1"><div class="grid-demo-content">5/6</div></div>
-          <div class="hndy-col-span-1"><div class="grid-demo-content">6/6</div></div>
-        </div>
-        <div class="hndy-row hndy-row--17">
-          <div class="hndy-col-span-5"><div class="grid-demo-content">5/17</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content">3/17</div></div>
-          <div class="hndy-col-span-1"><div class="grid-demo-content">1/17</div></div>
-          <div class="hndy-col-span-6"><div class="grid-demo-content">6/17</div></div>
-          <div class="hndy-col-span-2"><div class="grid-demo-content">2/17</div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="example">
-    <div class="hndy-grid-container">
-      <div class="hndy-row">
-        <div class="hndy-col-span-12">
-          <h4>Responsive</h4>
-        </div>
-      </div>
-    </div>
-    <div class="grid-demo">
-      <div class="hndy-grid-container">
-        <div class="hndy-row">
-          <div class="hndy-sm:col-span-0 hndy-md:col-span-3 hndy-lg:col-span-3"><div class="grid-demo-content">Sm Screen Hidden</div></div>
-          <div class="hndy-sm:col-span-3 hndy-md:col-span-0 hndy-lg:col-span-3"><div class="grid-demo-content">Md Screen Hidden</div></div>
-          <div class="hndy-sm:col-span-3 hndy-md:col-span-3 hndy-lg:col-span-0"><div class="grid-demo-content">Lg Screen Hidden</div></div>
-          <div class="hndy-sm:col-span-3 hndy-md:col-span-3 hndy-lg:col-span-3 hndy-lg:col-span-0"><div class="grid-demo-content">Xl Screen Hidden</div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="example">
-    <div class="hndy-grid-container">
-      <div class="hndy-row">
-        <div class="hndy-col-span-12">
-          <h4>Subrow</h4>
-        </div>
-      </div>
-    </div>
-    <div class="grid-demo">
-      <div class="hndy-grid-container">
-        <div class="hndy-row">
-          <div class="hndy-col-span-3"><div class="grid-demo-content"></div></div>
-          <div class="hndy-col-span-6">
-            <div class="hndy-row">
-              <div class="hndy-col-span-3"><div class="grid-demo-content"></div></div>
-              <div class="hndy-col-span-3"><div class="grid-demo-content"></div></div>
-              <div class="hndy-col-span-3"><div class="grid-demo-content"></div></div>
-              <div class="hndy-col-span-3"><div class="grid-demo-content"></div></div>
-            </div>
-          </div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content"></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="example">
-    <div class="hndy-grid-container">
-      <div class="hndy-row">
-        <div class="hndy-col-span-12">
-          <h4>Mix row</h4>
-        </div>
-      </div>
-    </div>
-    <div class="grid-demo">
-      <div class="hndy-grid-container">
-        <div class="hndy-row">
-          <div class="hndy-col-span-4">
-            <div class="hndy-row hndy-row--narrow">
-              <div class="hndy-col-span-12"><div class="grid-demo-content">Narrow</div></div>
-            </div>
-          </div>
-          <div class="hndy-col-span-8">
-            <div class="hndy-row hndy-row--condensed">
-              <div class="hndy-col-span-12"><div class="grid-demo-content">Condensed</div></div>
-            </div>
+          <div class="hndy-col-span-12">
+            <h4>Wide</h4>
           </div>
         </div>
-        <div class="hndy-row">
-          <div class="hndy-col-span-8">
-            <div class="hndy-row">
-              <div class="hndy-col-span-12"><div class="grid-demo-content">Wide</div></div>
+      </div>
+      <div class="grid-demo">
+        <div class="hndy-grid-container">
+          <div class="hndy-row">
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">1/4</div>
             </div>
-          </div>
-          <div class="hndy-col-span-4">
-            <div class="hndy-row hndy-row--narrow">
-              <div class="hndy-col-span-12"><div class="grid-demo-content">Narrow</div></div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">2/4</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">3/4</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">4/4</div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="example">
-    <div class="hndy-grid-container">
-      <div class="hndy-row">
-        <div class="hndy-col-span-12">
-          <h4>Offset</h4>
-        </div>
-      </div>
-    </div>
-    <div class="grid-demo">
-      <div class="hndy-grid-container">
-      <div class="hndy-row">
-        <div class="hndy-col-span-3 hndy-col-start-2">
-          <div class="grid-demo-content">Start 2</div>
-        </div>
-        <div class="hndy-col-span-3 hndy-col-start-7">
-          <div class="grid-demo-content">Start 7</div>
-        </div>
-        <div class="hndy-col-span-3">
-          <div class="grid-demo-content"></div>
-        </div>
-        <div class="hndy-col-span-3">
-          <div class="grid-demo-content"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="example">
-    <div class="hndy-grid-container">
-      <div class="hndy-row">
-        <div class="hndy-col-span-12">
-          <h4>Include column padding</h4>
-        </div>
-      </div>
-    </div>
-    <div class="grid-demo">
+    <section class="example">
       <div class="hndy-grid-container">
         <div class="hndy-row">
-          <div class="hndy-col-span-3 hndy-col-padding"><div class="grid-demo-content">1/4</div></div>
-          <div class="hndy-col-span-3 hndy-col-padding"><div class="grid-demo-content">2/4</div></div>
-          <div class="hndy-col-span-3 hndy-col-padding"><div class="grid-demo-content">3/4</div></div>
-          <div class="hndy-col-span-3 hndy-col-padding"><div class="grid-demo-content">4/4</div></div>
+          <div class="hndy-col-span-12">
+            <h4>Condensed</h4>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+      <div class="grid-demo">
+        <div class="hndy-grid-container">
+          <div class="hndy-row hndy-row--condensed">
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">1/4</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">2/4</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">3/4</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">4/4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section class="example">
-    <div class="hndy-grid-container">
-      <div class="hndy-row">
-        <div class="hndy-col-span-12">
-          <h4>Include row padding</h4>
-        </div>
-      </div>
-    </div>
-    <div class="grid-demo">
-      <div class="hndy-grid-container">
-        <div class="hndy-row hndy-row-padding">
-          <div class="hndy-col-span-3"><div class="grid-demo-content">1/4</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content">2/4</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content">3/4</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content">4/4</div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="example">
-    <div class="hndy-grid-container">
-      <div class="hndy-row">
-        <div class="hndy-col-span-12">
-          <h4>No gutter padding</h4>
-        </div>
-      </div>
-    </div>
-    <div class="grid-demo">
+    <section class="example">
       <div class="hndy-grid-container">
         <div class="hndy-row">
-          <div class="hndy-col-span-3"><div class="grid-demo-content">1/4</div></div>
-          <div class="hndy-col-span-3 hndy-no-gutter"><div class="grid-demo-content">2/4</div></div>
-          <div class="hndy-col-span-3 hndy-no-gutter"><div class="grid-demo-content">3/4</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content">4/4</div></div>
+          <div class="hndy-col-span-12">
+            <h4>Narrow</h4>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+      <div class="grid-demo">
+        <div class="hndy-grid-container">
+          <div class="hndy-row hndy-row--narrow">
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">1/4</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">2/4</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">3/4</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">4/4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section class="example">
-    <div class="hndy-grid-container">
-      <div class="hndy-row">
-        <div class="hndy-col-span-12">
-          <h4>No gutter row</h4>
-        </div>
-      </div>
-    </div>
-    <div class="grid-demo">
-      <div class="hndy-grid-container">
-        <div class="hndy-row hndy-no-gutter">
-          <div class="hndy-col-span-3"><div class="grid-demo-content">1/4</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content">2/4</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content">3/4</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content">4/4</div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="example">
-    <div class="hndy-grid-container">
-      <div class="hndy-row">
-        <div class="hndy-col-span-12">
-          <h4>No gutter directional</h4>
-        </div>
-      </div>
-    </div>
-    <div class="grid-demo">
+    <section class="example">
       <div class="hndy-grid-container">
         <div class="hndy-row">
-          <div class="hndy-col-span-3"><div class="grid-demo-content"></div></div>
-          <div class="hndy-col-span-3 hndy-no-gutter--end"><div class="grid-demo-content">No gutter right side</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content"></div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content"></div></div>
-        </div>
-        <div class="hndy-row">
-          <div class="hndy-col-span-3 hndy-no-gutter--start"><div class="grid-demo-content">No gutter left side</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content"></div></div>
-          <div class="hndy-col-span-3 hndy-no-gutter--start"><div class="grid-demo-content">No gutter left side</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content"></div></div>
-        </div>
-        <div class="hndy-row hndy-no-gutter--start">
-          <div class="hndy-col-span-3"><div class="grid-demo-content">No gutter left side</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content">No gutter left side</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content">No gutter left side</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content">No gutter left side</div></div>
-        </div>
-        <div class="hndy-row hndy-no-gutter--end">
-          <div class="hndy-col-span-3"><div class="grid-demo-content">No gutter right side</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content">No gutter right side</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content">No gutter right side</div></div>
-          <div class="hndy-col-span-3"><div class="grid-demo-content">No gutter right side</div></div>
+          <div class="hndy-col-span-12">
+            <h4>Full Width</h4>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-</body>
+      <div class="grid-demo">
+        <div class="hndy-grid-container hndy-grid-container--full-width">
+          <div class="hndy-row">
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">1/4</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">2/4</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">3/4</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">4/4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="example">
+      <div class="hndy-grid-container">
+        <div class="hndy-row">
+          <div class="hndy-col-span-12">
+            <h4>Custom Grid Column</h4>
+          </div>
+        </div>
+      </div>
+      <div class="grid-demo">
+        <div class="hndy-grid-container">
+          <div class="hndy-row hndy-row--6">
+            <div class="hndy-col-span-1">
+              <div class="grid-demo-content">1/6</div>
+            </div>
+            <div class="hndy-col-span-1">
+              <div class="grid-demo-content">2/6</div>
+            </div>
+            <div class="hndy-col-span-1">
+              <div class="grid-demo-content">3/6</div>
+            </div>
+            <div class="hndy-col-span-1">
+              <div class="grid-demo-content">4/6</div>
+            </div>
+            <div class="hndy-col-span-1">
+              <div class="grid-demo-content">5/6</div>
+            </div>
+            <div class="hndy-col-span-1">
+              <div class="grid-demo-content">6/6</div>
+            </div>
+          </div>
+          <div class="hndy-row hndy-row--17">
+            <div class="hndy-col-span-5">
+              <div class="grid-demo-content">5/17</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">3/17</div>
+            </div>
+            <div class="hndy-col-span-1">
+              <div class="grid-demo-content">1/17</div>
+            </div>
+            <div class="hndy-col-span-6">
+              <div class="grid-demo-content">6/17</div>
+            </div>
+            <div class="hndy-col-span-2">
+              <div class="grid-demo-content">2/17</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="example">
+      <div class="hndy-grid-container">
+        <div class="hndy-row">
+          <div class="hndy-col-span-12">
+            <h4>Responsive</h4>
+          </div>
+        </div>
+      </div>
+      <div class="grid-demo">
+        <div class="hndy-grid-container">
+          <div class="hndy-row">
+            <div
+              class="hndy-sm:col-span-0 hndy-md:col-span-3 hndy-lg:col-span-3"
+            >
+              <div class="grid-demo-content">Sm Screen Hidden</div>
+            </div>
+            <div
+              class="hndy-sm:col-span-3 hndy-md:col-span-0 hndy-lg:col-span-3"
+            >
+              <div class="grid-demo-content">Md Screen Hidden</div>
+            </div>
+            <div
+              class="hndy-sm:col-span-3 hndy-md:col-span-3 hndy-lg:col-span-0"
+            >
+              <div class="grid-demo-content">Lg Screen Hidden</div>
+            </div>
+            <div
+              class="hndy-sm:col-span-3 hndy-md:col-span-3 hndy-lg:col-span-3 hndy-lg:col-span-0"
+            >
+              <div class="grid-demo-content">Xl Screen Hidden</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="example">
+      <div class="hndy-grid-container">
+        <div class="hndy-row">
+          <div class="hndy-col-span-12">
+            <h4>Subrow</h4>
+          </div>
+        </div>
+      </div>
+      <div class="grid-demo">
+        <div class="hndy-grid-container">
+          <div class="hndy-row">
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content"></div>
+            </div>
+            <div class="hndy-col-span-6">
+              <div class="hndy-row">
+                <div class="hndy-col-span-3">
+                  <div class="grid-demo-content"></div>
+                </div>
+                <div class="hndy-col-span-3">
+                  <div class="grid-demo-content"></div>
+                </div>
+                <div class="hndy-col-span-3">
+                  <div class="grid-demo-content"></div>
+                </div>
+                <div class="hndy-col-span-3">
+                  <div class="grid-demo-content"></div>
+                </div>
+              </div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="example">
+      <div class="hndy-grid-container">
+        <div class="hndy-row">
+          <div class="hndy-col-span-12">
+            <h4>Mix row</h4>
+          </div>
+        </div>
+      </div>
+      <div class="grid-demo">
+        <div class="hndy-grid-container">
+          <div class="hndy-row">
+            <div class="hndy-col-span-4">
+              <div class="hndy-row hndy-row--narrow">
+                <div class="hndy-col-span-12">
+                  <div class="grid-demo-content">Narrow</div>
+                </div>
+              </div>
+            </div>
+            <div class="hndy-col-span-8">
+              <div class="hndy-row hndy-row--condensed">
+                <div class="hndy-col-span-12">
+                  <div class="grid-demo-content">Condensed</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hndy-row">
+            <div class="hndy-col-span-8">
+              <div class="hndy-row">
+                <div class="hndy-col-span-12">
+                  <div class="grid-demo-content">Wide</div>
+                </div>
+              </div>
+            </div>
+            <div class="hndy-col-span-4">
+              <div class="hndy-row hndy-row--narrow">
+                <div class="hndy-col-span-12">
+                  <div class="grid-demo-content">Narrow</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="example">
+      <div class="hndy-grid-container">
+        <div class="hndy-row">
+          <div class="hndy-col-span-12">
+            <h4>Offset</h4>
+          </div>
+        </div>
+      </div>
+      <div class="grid-demo">
+        <div class="hndy-grid-container">
+          <div class="hndy-row">
+            <div class="hndy-col-span-3 hndy-col-start-2">
+              <div class="grid-demo-content">Start 2</div>
+            </div>
+            <div class="hndy-col-span-3 hndy-col-start-7">
+              <div class="grid-demo-content">Start 7</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content"></div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="example">
+      <div class="hndy-grid-container">
+        <div class="hndy-row">
+          <div class="hndy-col-span-12">
+            <h4>Include column padding</h4>
+          </div>
+        </div>
+      </div>
+      <div class="grid-demo">
+        <div class="hndy-grid-container">
+          <div class="hndy-row">
+            <div class="hndy-col-span-3 hndy-col-padding">
+              <div class="grid-demo-content">1/4</div>
+            </div>
+            <div class="hndy-col-span-3 hndy-col-padding">
+              <div class="grid-demo-content">2/4</div>
+            </div>
+            <div class="hndy-col-span-3 hndy-col-padding">
+              <div class="grid-demo-content">3/4</div>
+            </div>
+            <div class="hndy-col-span-3 hndy-col-padding">
+              <div class="grid-demo-content">4/4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="example">
+      <div class="hndy-grid-container">
+        <div class="hndy-row">
+          <div class="hndy-col-span-12">
+            <h4>Include row padding</h4>
+          </div>
+        </div>
+      </div>
+      <div class="grid-demo">
+        <div class="hndy-grid-container">
+          <div class="hndy-row hndy-row-padding">
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">1/4</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">2/4</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">3/4</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">4/4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="example">
+      <div class="hndy-grid-container">
+        <div class="hndy-row">
+          <div class="hndy-col-span-12">
+            <h4>No gutter padding</h4>
+          </div>
+        </div>
+      </div>
+      <div class="grid-demo">
+        <div class="hndy-grid-container">
+          <div class="hndy-row">
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">1/4</div>
+            </div>
+            <div class="hndy-col-span-3 hndy-no-gutter">
+              <div class="grid-demo-content">2/4</div>
+            </div>
+            <div class="hndy-col-span-3 hndy-no-gutter">
+              <div class="grid-demo-content">3/4</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">4/4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="example">
+      <div class="hndy-grid-container">
+        <div class="hndy-row">
+          <div class="hndy-col-span-12">
+            <h4>No gutter row</h4>
+          </div>
+        </div>
+      </div>
+      <div class="grid-demo">
+        <div class="hndy-grid-container">
+          <div class="hndy-row hndy-no-gutter">
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">1/4</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">2/4</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">3/4</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">4/4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="example">
+      <div class="hndy-grid-container">
+        <div class="hndy-row">
+          <div class="hndy-col-span-12">
+            <h4>No gutter directional</h4>
+          </div>
+        </div>
+      </div>
+      <div class="grid-demo">
+        <div class="hndy-grid-container">
+          <div class="hndy-row">
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content"></div>
+            </div>
+            <div class="hndy-col-span-3 hndy-no-gutter--end">
+              <div class="grid-demo-content">No gutter right side</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content"></div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content"></div>
+            </div>
+          </div>
+          <div class="hndy-row">
+            <div class="hndy-col-span-3 hndy-no-gutter--start">
+              <div class="grid-demo-content">No gutter left side</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content"></div>
+            </div>
+            <div class="hndy-col-span-3 hndy-no-gutter--start">
+              <div class="grid-demo-content">No gutter left side</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content"></div>
+            </div>
+          </div>
+          <div class="hndy-row hndy-no-gutter--start">
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">No gutter left side</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">No gutter left side</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">No gutter left side</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">No gutter left side</div>
+            </div>
+          </div>
+          <div class="hndy-row hndy-no-gutter--end">
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">No gutter right side</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">No gutter right side</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">No gutter right side</div>
+            </div>
+            <div class="hndy-col-span-3">
+              <div class="grid-demo-content">No gutter right side</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
