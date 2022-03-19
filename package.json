@@ -1,0 +1,35 @@
+{
+  "name": "handy-grid",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [
+    "grid",
+    "css",
+    "scss",
+    "flexbox"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "prettier --check .",
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onursabanoglu/handy-grid.git"
+  },
+  "author": "Onur Şabanoğlu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/onursabanoglu/handy-grid/issues"
+  },
+  "homepage": "https://github.com/onursabanoglu/handy-grid#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.49.9"
+  },
+  "devDependencies": {
+    "prettier": "^2.6.0"
+  }
+}
