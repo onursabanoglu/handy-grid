@@ -1,7 +1,7 @@
 {
   "name": "handy-grid",
   "version": "0.1.0",
-  "description": "",
+  "description": "Handy Grid is a very handy CSS grid system for creating layouts.",
   "main": "index.js",
   "keywords": [
     "grid",
@@ -10,7 +10,6 @@
     "flexbox"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "prettier --check .",
     "format": "prettier --write ."
   },
