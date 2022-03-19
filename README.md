@@ -9,16 +9,13 @@ npm install handy-grid
 ```
 
 ```scss
-@import './dist/css/main.css'
+@import './dist/css/main.css';
 ```
 
 ## Usage
 
- Examples and documentation can be found on this <a href="https://onursabanoglu.github.io/handy-grid/"> live demo website. </a>
-
-
-
+Examples and documentation can be found on this <a href="https://onursabanoglu.github.io/handy-grid/"> live demo website. </a>
 
 ### License
-This project is licensed under the MIT License
 
+This project is licensed under the MIT License
